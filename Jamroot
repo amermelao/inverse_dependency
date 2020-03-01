@@ -4,7 +4,6 @@ project invers_dep ;
 path-constant TOP : . ;
 
 use-project /module : $(TOP)/module ;
-use-project /interface : $(TOP)/interface ;
 use-project /implementation : $(TOP)/implementation ;
 
 exe build-all-static 
