@@ -21,4 +21,4 @@ In here there is a litle example. The best part is that you reduce the amount of
 ## HOW TO
 
  - Install boost build.
- - b2 test --prefix=<destination> release
+ - b2 test --prefix=\<destination\> release
