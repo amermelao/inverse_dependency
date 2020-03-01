@@ -1,0 +1,16 @@
+import path ;
+
+path-constant TOP : . ;
+path-constant TOP_SRC : $(TOP)/src ;
+path-constant TOP_INCLUDE : $(TOP)/include ;
+
+project interface ;
+
+alias interface
+	:
+		# [ glob $(TOP_SRC)/* : *.cpp ]
+	:
+	:
+	:
+		<include>$(TOP_INCLUDE)
+	;

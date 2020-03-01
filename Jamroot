@@ -1,0 +1,37 @@
+import package ;
+project invers_dep ;
+
+path-constant TOP : . ;
+
+use-project /module : $(TOP)/module ;
+use-project /interface : $(TOP)/interface ;
+use-project /implementation : $(TOP)/implementation ;
+
+exe build-all-static 
+	:
+		main.cpp
+		/module//module-lib
+		/implementation//implementation
+	:
+		<link>static
+	;
+
+exe buil-all-share 
+	:
+		main.cpp
+		/module//module-lib
+		/implementation//implementation
+	;
+
+package.install test 
+	:
+		<dll-path>../lib
+	:
+		build-all-static 
+	    buil-all-share
+	:
+		/module//module-lib
+		/implementation//implementation
+	:
+		$(TOP)/interface/include/interface.h
+	;

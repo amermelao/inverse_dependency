@@ -1,0 +1,18 @@
+path-constant TOP : . ;
+path-constant TOP_SRC : $(TOP)/src ;
+path-constant TOP_INCLUDE : $(TOP)/include ;
+
+project module-one ;
+
+use-project /interface : $(TOP)/../interface ;
+
+lib module-lib
+	:
+		[ glob $(TOP_SRC)/* : *.cpp ]
+		/interface//interface
+	:
+		<include>$(TOP_INCLUDE)
+	:
+	:
+		<include>$(TOP_INCLUDE)
+	;
