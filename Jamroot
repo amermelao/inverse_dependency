@@ -24,7 +24,7 @@ exe buil-all-share
 
 package.install test 
 	:
-		<dll-path>../lib
+		<dll-path>'\$ORIGIN'/../lib
 	:
 		build-all-static 
 	    buil-all-share

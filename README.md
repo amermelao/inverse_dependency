@@ -22,3 +22,11 @@ In here there is a litle example. The best part is that you reduce the amount of
 
  - Install boost build.
  - b2 test --prefix=\<destination\> release
+
+ ## side note
+
+ In order to use $ORIGIN in the rpath or runpath, you have to change the feature declaration 
+ of dll-path. Because it requieres a path type object.
+ To do so go to share/boost-build/tools/features/dll-feature.jam and delete the path option.
+
+ I couldn't find the mail that referes to this topic.
